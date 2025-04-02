@@ -1,0 +1,28 @@
+using System;
+
+namespace zadanie1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Napisać program wczytujący długości boków prostopadłościanu i wypisujący na ekranie jego
+            //objętość i pole całkowite.
+            double x, y, h, V, P;
+            Console.Write("podaj x: ");
+            x = Convert.ToDouble(Console.ReadLine());
+            Console.Write("podaj y: ");
+            y = Convert.ToDouble(Console.ReadLine());
+            Console.Write("podaj h: ");
+            h = Convert.ToDouble(Console.ReadLine());
+            // V = x*y*h
+            V = x * y * h;
+            // P = 2*(x*y + x*h + y*h)
+            P = 2 * (x * y + x * h + y * h);
+            Console.WriteLine("objetosc = {0}", V);
+            Console.WriteLine("pole calkowite = {0}", P);
+            Console.ReadKey(true);
+
+        }
+    }
+}
