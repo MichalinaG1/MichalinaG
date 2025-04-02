@@ -1,0 +1,19 @@
+using System;
+
+namespace zadanie1
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            // Dany jest ciąg arytmetyczny a(n)=3n-1. Napisać program wczytujący numer wyrazu ciągu (n) i
+            // wypisujący na ekranie jego wartość.
+            double ciag, n;
+            Console.Write("podaj n: ");
+            n = Convert.ToDouble(Console.ReadLine());
+            ciag = 3*n-1;
+            Console.WriteLine("ciag(n) = {0}", ciag);
+            Console.ReadKey(true);
+        }
+    }
+}
