@@ -1,0 +1,24 @@
+using System;
+
+namespace zadanie1
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            // Napisać program wczytujący dwie liczby całkowite i wypisujący na ekranie iloraz tych liczb z
+            // uwzględnieniem części całkowitej i reszty z dzielenia.
+            int x, y;
+            double iloraz, reszta;
+            Console.Write("podaj x: ");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("podaj y: ");
+            y = Convert.ToInt32(Console.ReadLine());
+            iloraz = x / y;
+            reszta = x % y;
+            Console.WriteLine("iloraz = {0}/{1}={2}", x,y,iloraz);
+            Console.WriteLine("reszta = {0}%{1}={2}", x,y, reszta);
+            Console.ReadKey(true);
+        }
+    }
+}
