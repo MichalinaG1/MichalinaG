@@ -1,0 +1,21 @@
+using System;
+
+namespace zadanie1
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            // Napisać program wczytujący dwie liczby całkowite i wypisujący na ekranie sumę kwadratów
+// wczytanych liczb.
+            double x, y, SumaKwadratow;
+            Console.Write("podaj x: ");
+            x = Convert.ToDouble(Console.ReadLine());
+            Console.Write("podaj y: ");
+            y = Convert.ToDouble(Console.ReadLine());
+            SumaKwadratow = x*x + y*y;
+            Console.WriteLine("suma kwadratow = {0}", SumaKwadratow);
+            Console.ReadKey(true);
+        }
+    }
+}
