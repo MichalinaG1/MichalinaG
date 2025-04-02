@@ -1,0 +1,19 @@
+using System;
+
+namespace zadanie1
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            // . Napisać program wczytujący z klawiatury liczbę całkowitą i wypisujący na ekranie sześcian
+//wczytanej liczby.
+            int x;
+            Console.Write("Podaj x: ");
+            x = Convert.ToInt32( Console.ReadLine());
+            Console.WriteLine("x^3 = {0}", x*x*x);
+            Console.ReadKey(true);
+
+        }
+    }
+}
