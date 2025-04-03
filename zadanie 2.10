@@ -1,0 +1,102 @@
+using System;
+
+namespace zadanie2
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            //Napisać program wczytujący liczbę arabską od 1 do 1 000 000 i wypisujący na ekranie słownie
+            // wczytaną liczbę.
+            // Np.: wejście=105, wyjście=sto pięć.
+
+            int x;
+            Console.Write("podaj liczbe arabska od 1 do 1000000: ");
+            x = Convert.ToInt32(Console.ReadLine());
+            
+            // miliony
+            if (x >= 1000000) {x-=1000000; Console.Write(" milion");}
+            
+            //setki tysiecy
+            if (x>=900000) {x-=900000; Console.Write(" dziewiecset tysiecy");}
+            else if (x>=800000) {x -= 800000; Console.Write(" osiemset tysiecy");}
+            else if (x>=700000) {x -= 700000; Console.Write(" siedemset tysiecy");}
+            else if (x>=600000) {x -= 600000; Console.Write(" szescset tysiecy");}
+            else if (x>=500000) {x -= 500000; Console.Write(" piecset tysiecy");}
+            else if (x>=400000) {x -= 400000; Console.Write(" czterysta tysiecy");}
+            else if (x>=300000) {x -= 300000; Console.Write(" trzysta tysiecy");}
+            else if (x>=200000) {x -= 200000; Console.Write(" dwiescie tysiecy");}
+            else if (x>=100000) {x -= 100000; Console.Write(" sto tysiecy");}
+            
+            //dziesiatki tysiecy
+            if (x>=90000) {x-=90000; Console.Write(" dziewiecdziesiat tysiecy");}
+            else if (x>=80000) {x -= 80000; Console.Write(" osiemdziesiat tysiecy");}
+            else if (x>=70000) {x -= 70000; Console.Write(" siedemdziesiat tysiecy");}
+            else if (x>=60000) {x -= 60000; Console.Write(" szescdziesiat tysiecy");}
+            else if (x>=50000) {x -= 50000; Console.Write(" piecdziesiat tysiecy");}
+            else if (x>=40000) {x -= 40000; Console.Write(" czterdziesci tysiecy");}
+            else if (x>=30000) {x -= 30000; Console.Write(" trzydziesci tysiecy");}
+            else if (x>=20000) {x -= 20000; Console.Write(" dwadziescia tysiecy");}
+            else if (x>=10000) {x -= 10000; Console.Write(" dziesiec tysiecy");}
+            
+            //tysiace
+            if (x>=9000) {x-=9000; Console.Write(" dziewiec tysiecy");}
+            else if (x>=8000) {x -= 8000; Console.Write(" osiem tysiecy");}
+            else if (x>=7000) {x -= 7000; Console.Write(" siedem tysiecy");}
+            else if (x>=6000) {x -= 6000; Console.Write(" szesc tysiecy");}
+            else if (x>=5000) {x -= 5000; Console.Write(" piec tysiecy");}
+            else if (x>=4000) {x -= 4000; Console.Write(" cztery tysiace");}
+            else if (x>=3000) {x -= 3000; Console.Write(" trzy tysiace");}
+            else if (x>=2000) {x -= 2000; Console.Write(" dwa tysiace");}
+            else if (x>=1000) {x -= 1000; Console.Write(" tysiac");}
+            
+            //setki
+            if (x>=900) {x-=900; Console.Write(" dziewiecset");}
+            else if (x>=800) {x -= 800; Console.Write(" osiemset");}
+            else if (x>=700) {x -= 700; Console.Write(" siedemset");}
+            else if (x>=600) {x -= 600; Console.Write(" szescset");}
+            else if (x>=500) {x -= 500; Console.Write(" piecset");}
+            else if (x>=400) {x -= 400; Console.Write(" czterysta");}
+            else if (x>=300) {x -= 300; Console.Write(" trzysta");}
+            else if (x>=200) {x -= 200; Console.Write(" dwiescie");}
+            else if (x>=100) {x -= 100; Console.Write(" sto");}
+            
+            //dziesiatki
+            if (x>=90) {x-=90; Console.Write(" dziewiecdziesiat");}
+            else if (x>=80) {x -= 80; Console.Write(" osiemdziesiat");}
+            else if (x>=70) {x -= 70; Console.Write(" siedemziesiat");}
+            else if (x>=60) {x -= 60; Console.Write(" szescdziesiat");}
+            else if (x>=50) {x -= 50; Console.Write(" piecdziesiat");}
+            else if (x>=40) {x -= 40; Console.Write(" czterdziesci");}
+            else if (x>=30) {x -= 30; Console.Write(" trzydziesci");}
+            else if (x>=20) {x -= 20; Console.Write(" dwadziescia");}
+            else if (x>=10) {x -= 10; Console.Write(" dziesiec");}
+            
+            // jednostki
+            switch (x)
+            {
+                case 1: Console.Write(" jeden");
+                    break;
+                case 2: Console.Write(" dwa");
+                    break;
+                case 3: Console.Write(" trzy");
+                    break;
+                case 4: Console.Write(" cztery");
+                    break;
+                case 5: Console.Write(" piec");
+                    break;
+                case 6: Console.Write(" szesc");
+                    break;
+                case 7: Console.Write(" siedem");
+                    break;
+                case 8: Console.Write(" osiem");
+                    break;
+                case 9: Console.Write(" dziewiec");
+                    break;
+                default: Console.Write("");
+                    break;
+            }
+            Console.ReadKey(true);
+        }
+    }
+}
