@@ -1,0 +1,23 @@
+using System;
+
+namespace zadanie2
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            // Napisać program wczytujący liczbę całkowitą i wypisujący informację, czy wczytana liczba jest
+            // dodatnia, ujemna, czy też równa zero.
+            int x;
+            Console.Write("podaj x: ");
+            x = Convert.ToInt32(Console.ReadLine());
+            if (x == 0)
+                Console.WriteLine("liczba jest rowna 0: {0}", x);
+            else if (x>0)
+                Console.WriteLine("liczba jest dodatnia: {0}", x);
+            else 
+                Console.WriteLine("liczba jest ujemna: {0}", x);
+            Console.ReadKey(true);
+        }
+    }
+}
