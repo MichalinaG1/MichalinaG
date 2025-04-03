@@ -1,0 +1,21 @@
+using System;
+
+namespace zadanie2
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            // Napisać program wczytujący liczbę całkowitą i wypisujący na ekranie informację czy jest to
+            // liczba parzysta, czy też nieparzysta.
+            int x;
+            Console.Write("podaj x: ");
+            x = Convert.ToInt32(Console.ReadLine());
+            if (x%2==0)
+                Console.WriteLine("liczba jest parzysta: {0}", x);
+            else
+                Console.WriteLine("liczba jest nieparzysta: {0}", x);
+            Console.ReadKey(true);
+        }
+    }
+}
