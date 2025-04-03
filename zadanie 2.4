@@ -1,0 +1,47 @@
+using System;
+
+namespace zadanie2
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+          // Napisać program wczytujący pięć liczb i wypisujący na ekranie wartość najmniejszej
+          // największej z tych liczb.
+          double x, y, z, q, v, max, min;
+          Console.Write("podaj liczbe: ");
+          x = Convert.ToDouble(Console.ReadLine());
+          Console.Write("podaj liczbe: ");
+          y = Convert.ToDouble(Console.ReadLine());
+          Console.Write("podaj liczbe: ");
+          z = Convert.ToDouble(Console.ReadLine());
+          Console.Write("podaj liczbe: ");
+          q = Convert.ToDouble(Console.ReadLine());
+          Console.Write("podaj liczbe: ");
+          v = Convert.ToDouble(Console.ReadLine());
+
+          max = x;
+          if (y > max)
+              max = y;
+          if (z > max)
+              max = z;
+          if (q > max)
+              max = q;
+          if (v > max)
+              max = v;
+          Console.WriteLine("najwieksza liczba: {0}", max);
+
+          min = x;
+          if (y < min)
+              min = y;
+          if(z < min)
+              min = z;
+          if(q < min)
+              min = q;
+          if(v < min)
+              min = v;
+          Console.WriteLine("najmniejsza liczba: {0}", min);
+          Console.ReadKey(true);
+        }
+    }
+}
