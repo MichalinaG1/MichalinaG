@@ -1,0 +1,102 @@
+using System;
+
+namespace zadanie2
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            // Napisać program wczytujący liczbę arabską od 1 do 3999 i wypisujący na ekranie jej
+            // odpowiednik rzymski.
+            int x;
+            Console.Write("podaj liczbe arabska od 1 do 3999: ");
+            x = Convert.ToInt32(Console.ReadLine());
+            // M =1000, CM =900, DCCC =800, D=500, C=100, L=50, IX=9, V=5, I=1
+            
+            //tysiace
+            if (x>=3000)
+                {x-=3000; Console.Write("MMM");}
+            else if (x>=2000)
+                {x-=2000; Console.Write("MM");}
+            else if (x>=1000)
+                {x-=1000; Console.Write("M");}
+            
+            //setki
+            if (x>=900)
+                {x-=900; Console.Write("CM");}
+            else if (x>=800)
+                {x-=800; Console.Write("DCCC");}
+            else if (x>=700)
+                {x-=700; Console.Write("DCC");}
+            else if (x>=600)
+                {x-=600; Console.Write("DC");}
+            else if (x>=500)
+                {x-=500; Console.Write("D");}
+            else if (x>=400)
+                {x-=400; Console.Write("CD");}
+            else if (x>=300)
+                {x-=300; Console.Write("CCC");}
+            else if (x>=200)
+                {x-=200; Console.Write("CC");}
+            else if (x>=100)
+                {x-=100; Console.Write("C");}
+            
+            // dziesiatki
+            if (x>=90)
+                {x-=90; Console.Write("XC");}
+            else if (x>=80)
+                {x-=80; Console.Write("LXXX");}
+            else if (x>=70)
+                {x-=70; Console.Write("LXX");}
+            else if (x>=60)
+                {x-=60; Console.Write("LX");}
+            else if (x>=50)
+                {x-=50; Console.Write("L");}
+            else if (x>=40)
+                {x-=40; Console.Write("XL");}
+            else if (x>=30)
+                {x-=30; Console.Write("XXX");}
+            else if (x>=20)
+                {x-=20; Console.Write("XX");}
+            else if (x>=10)
+                {x-=10; Console.Write("X");}
+            
+            // jednosci
+            switch (x)
+            {
+                case 1:
+                    Console.Write("I");
+                    break;
+                case 2:
+                    Console.Write("II");
+                    break;
+                case 3:
+                    Console.Write("III");
+                    break;
+                case 4:
+                    Console.Write("IV");
+                    break;
+                case 5:
+                    Console.Write("V");
+                    break;
+                case 6:
+                    Console.Write("VI");
+                    break;
+                case 7:
+                    Console.Write("VII");
+                    break;
+                case 8:
+                    Console.Write("VIII");
+                    break;
+                case 9:
+                    Console.Write("IX");
+                    break;
+                default:
+                    Console.Write("");
+                    break;
+            }
+
+            Console.ReadKey(true);
+        }
+    }
+}
