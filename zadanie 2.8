@@ -1,0 +1,33 @@
+using System;
+
+namespace zadanie2
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            //Napisać program wczytujący trzy długości odcinków i wypisujący na ekranie informację czy
+            // da się z tych odcinków zbudować trójkąt, czy też nie.
+
+            double x, y, z;
+            Console.Write("podaj bok: ");
+            x = Convert.ToDouble(Console.ReadLine());
+            Console.Write("podaj bok: ");
+            y = Convert.ToDouble(Console.ReadLine());
+            Console.Write("podaj bok: ");
+            z = Convert.ToDouble(Console.ReadLine());
+            
+            // mozna zbudowac trojkat gdy: a+b>c gdzie a<=b<=c
+      
+                if ((x+y>z) && (x<=z && y<=z))
+                    Console.Write("mozna zbudowac trojkat");
+                else if ((x+z>y) && (x<=y && z<=y))
+                    Console.Write("mozna zbudowac trojkat");
+                else if ((y+z>x) &&(y<=x && z<=x))
+                    Console.Write("mozna zbudowac trojkat");
+                else 
+                    Console.Write("nie mozna zbudowac trojkata ");
+                Console.ReadKey(true);
+        }
+    }
+}
