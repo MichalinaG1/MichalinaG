@@ -1,0 +1,25 @@
+using System;
+
+namespace zadanie2
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+           // Napisać program wczytujący rok i wypisujący na ekranie informację czy jest to rok przestępny
+           // czy też nie.
+           int rok;
+           Console.Write("podaj rok: ");
+           rok = Convert.ToInt32(Console.ReadLine());
+           // rok jest przestepny jezeli:
+           // 1. jest podzielny przez 4
+           // 2. nie jest podzielny przez 100
+           // 3. jest podzielny przez 400
+           if ((rok%4==0) && (rok%100!=0) || (rok%400==0))
+               Console.WriteLine("rok jest przestepny: {0}", rok);
+           else
+               Console.WriteLine("rok nie jest przestepny: {0}", rok);
+           Console.ReadKey(true);
+        }
+    }
+}
