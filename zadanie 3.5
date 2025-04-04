@@ -1,0 +1,25 @@
+using System;
+
+namespace zadanie3
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            // Wczytaj liczbę naturalną n (n>1). Narysuj na ekranie z gwiazdek trójkąt prostokątny. Użyj
+            // pętli for. Przykładowo dla n=3 narysowany trójkąt powinien wyglądać:
+            int x, y, n;
+            Console.Write("podaj n: ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            for (x = 1; x <= n; x++)
+            {
+                for (y = 1; y <= x; y++)
+                    Console.Write("*");
+                Console.WriteLine("");
+            }
+
+            Console.ReadKey(true);
+        }
+    }
+}
