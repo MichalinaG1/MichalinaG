@@ -1,0 +1,56 @@
+using System;
+
+namespace zadanie4
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            //Napisać program, który będzie umożliwiał użytkownikowi obliczenia pól figur płaskich.
+            // Jeżeli użytkownik wybierze 1, to powinien mieć możliwość obliczenia pola prostokąta,
+            // dla 2 – pola kwadratu, a dla 3 – pola trójkąta. Program powinien pytać użytkownika, które
+            // pole chce obliczyć aż do momentu, kiedy użytkownik wpisze 0 (zero).
+
+            int wybor;
+            double x, y, h;
+            do
+            {
+                Console.WriteLine("MENU:");
+                Console.WriteLine("1 - oblicz pole prostokata");
+                Console.WriteLine("2 - oblicz pole kwadratu");
+                Console.WriteLine("3 - oblicz pole trojkata");
+                Console.WriteLine("0 - zakoncz");
+                Console.Write("twoj wybor: ");
+                wybor = Convert.ToInt32(Console.ReadLine());
+                switch (wybor)
+                {
+                    case 0:
+                        break;
+                    case 1:
+                        Console.Write("podaj x: ");
+                        x = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("podaj y: ");
+                        y = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine(" pole prostokata = {0}", x*y);
+                        break;
+                    case 2:
+                        Console.Write("podaj x: ");
+                        x = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("pole kwadratu = {0}", x*x);
+                        break;
+                    case 3:
+                        Console.Write("podaj x: ");
+                        x = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("podaj h: ");
+                        h = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("pole trojkata = {0}", (x*h)/2.0);
+                        break;
+                    default:
+                        Console.Write("blad");
+                        break;
+                }
+            } while (wybor != 0);
+
+        }
+    }
+}
