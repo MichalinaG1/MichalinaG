@@ -1,0 +1,33 @@
+using System;
+
+namespace zadanie5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Napisać program wczytujący współrzędne dwóch punktów A=(x1,y1) i B=(x2,y2) oraz
+            // wypisujący na ekranie wzór funkcji liniowej przechodzącej przez te dwa punkty.
+            
+            int x1, y1, x2, y2;
+            double a, b;
+            
+            Console.Write("podaj wspolrzedna x punktu A: ");
+            x1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("podaj wspolrzedna y punktu A: ");
+            y1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("podaj wspolrzedna x punktu B: ");
+            x2 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("podaj wspolrzedna y punktu B: ");
+            y2 = Convert.ToInt32(Console.ReadLine());
+            
+            // Równanie prostej przechodzącej przez dwa punkty:  y=ax + b gdzie : a = (y2-y1)/(x2-x1) i b = y1 - a*x1
+            a = (y2 - y1) / (x2 - x1);
+            b = y1 - a * x1;
+            Console.WriteLine("rownanie prostej: y = {0}x + {1}", a, b);
+            Console.ReadKey(true);
+
+
+        }
+    }
+}
