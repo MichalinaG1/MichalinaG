@@ -1,0 +1,56 @@
+using System;
+
+namespace zadanie5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Napisać program wczytujący kwotę w złotych, a następnie przeliczający ją na taką walutę jaką
+            // wybierze użytkownik: funty, dolary, euro. Użyj instrukcji switch.
+            
+            //Oto aktualne kursy wymiany dla wybranych walut
+            // Euro (EUR):
+            // Kupno: 4,1048 PLN
+            // Sprzedaż: 4,4024 PLN
+            // Dolar amerykański (USD):
+            // Kupno: 3,7231 PLN
+            // Sprzedaż: 3,8033 PLN
+            // Funt szterling (GBP):
+            // Kupno: 4,9923 PLN
+            // Sprzedaż: 5,0575 PLN
+            
+            double kurs_GBP, kurs_USD, kurs_EUR, x, waluta;
+            Console.Write("podaj kwote w zlotowkach: ");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("MENU: ");
+            Console.WriteLine("1 - funt: ");
+            Console.WriteLine("2 - dolar: ");
+            Console.WriteLine("3 - euro: ");
+            Console.Write("wybrana waluta: ");
+            waluta = Convert.ToInt32(Console.ReadLine());
+            
+            kurs_GBP = 4.9923;
+            kurs_USD = 3.7231;
+            kurs_EUR = 4.4024;
+            
+            switch (waluta)
+            {
+                case 1:
+                    if (waluta == 1)
+                    x *= kurs_GBP;
+                    break;
+                case 2:
+                    if (waluta == 2)
+                    x *= kurs_USD;
+                    break;
+                case 3:
+                    if(waluta==3)
+                    x *= kurs_EUR;
+                    break;
+            }
+            Console.WriteLine("kwota = {0}",x);
+            Console.ReadKey(true);
+        }
+    }
+}
