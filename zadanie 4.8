@@ -1,0 +1,31 @@
+using System;
+
+namespace zadanie4
+{
+    class Program
+    {
+        static void Main( string[] args)
+        {
+            //Napisz program stwierdzający, czy zadana liczba n jest pierwsza. Użyj pętli while.
+            int n, i;
+            Console.Write("podaj n: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            
+            i = 2;
+            if (n<2)
+                Console.Write("liczba nie jest pierwsza");
+            else
+            {
+                while (i*i <= n && n % i != 0)
+                {
+                    i++;
+                }
+                if (i*i>n)
+                    Console.Write("liczba jest pierwsza");
+                else 
+                    Console.Write("liczba nie jest pierwsza");
+            }
+            Console.ReadKey(true);
+        }
+    }
+}
