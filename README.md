@@ -1,1 +1,1 @@
-// zadania C# wstep do programowania UG 2025
+#zadania C# wstep do programowania UG 2025
