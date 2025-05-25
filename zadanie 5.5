@@ -1,0 +1,28 @@
+using System;
+
+namespace zadanie5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Wczytaj liczbę naturalną n>0 i oblicz n^n .Nie można używać funkcji matematycznych.
+
+            int n, i, wynik, licznik;
+            Console.Write("podaj liczbe naturalna: ");
+            n = Convert.ToInt32(Console.ReadLine());
+
+            wynik = 1;
+            licznik = 0;
+            while (licznik < n)
+            {
+                wynik *= n;
+                licznik = licznik + 1;
+            }
+
+            Console.WriteLine("n^n = {0}", wynik);
+            Console.ReadKey(true);
+
+        }
+    }
+}
