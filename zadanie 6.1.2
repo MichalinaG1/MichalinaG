@@ -1,0 +1,22 @@
+// Napisać program wczytujący ciąg n (1<=n<=1000) liczb całkowitych (dodatnich i ujemnych) i
+// wypisujący wczytane liczby na ekranie.
+
+int[] tab = new int[1000];
+int i, n;
+
+do
+{
+    Console.Write("podaj ilość elementów tablicy gdzie 1<=n<=1000: ");
+    n = Convert.ToInt32(Console.ReadLine());
+} while (n<=0 || n>1000);
+//tablica tab bedzie miec n elementow
+tab = new int[n];
+for (i = 0; i < n; i++)
+{
+    Console.Write("podaj tab[{0}]: ", i);
+    tab[i] = Convert.ToInt32(Console.ReadLine());
+}
+Console.Write("elementy tablicy: ");
+foreach (int element in tab)
+    Console.Write("{0} ", element); 
+Console.ReadKey(true);
